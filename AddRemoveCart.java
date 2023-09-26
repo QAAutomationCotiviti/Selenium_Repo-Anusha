@@ -71,6 +71,10 @@ public class AddRemoveCart {
             System.out.println("item still in cart");
         }
     }
+    public static void checkoutbtn(WebDriver driver){
+        WebElement checkoutbtn=driver.findElement(By.id("checkout"));
+        checkoutbtn.click();
+    }
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
@@ -88,6 +92,7 @@ public class AddRemoveCart {
 
         addtocart(driver);
         removecart(driver);
+        checkoutbtn(driver);
 
     }
 }
